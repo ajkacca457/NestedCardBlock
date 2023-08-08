@@ -10,7 +10,9 @@ export default function save({attributes}) {
 		<div { ...useBlockProps.save({
 			className:classes
 		}) }>
-			<InnerBlocks.Content/>
+			<div className='layout-grid'>
+				<InnerBlocks.Content/>
+			</div>
 		</div>
 	);
 }

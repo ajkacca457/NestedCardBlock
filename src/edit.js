@@ -27,7 +27,7 @@ export default function Edit({attributes,setAttributes}) {
 				</PanelBody>
 			</InspectorControls>
 			<div { ...useBlockProps({
-				classNames:classes
+				className:classes
 			}) }>
 				<InnerBlocks allowedBlocks={['create-block/card-item']}/>
 			</div>

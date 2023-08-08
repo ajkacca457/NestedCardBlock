@@ -13,18 +13,20 @@
   padding: 2px;
   max-width: 1200px;
   margin: 20px auto;
-  display: grid;
 }
 
-.column-1 {
+.column-1 > .layout-grid {
+  display: grid;
   grid-template-columns: 1fr;
 }
 
-.column-2 {
+.column-2 > .layout-grid {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.column-3 {
+.column-3 > .layout-grid {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
