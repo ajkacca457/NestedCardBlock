@@ -27,7 +27,8 @@ function Edit({
 }) {
   const {
     title,
-    description
+    description,
+    alignment
   } = attributes;
   const changeTitle = newTitle => {
     setAttributes({
@@ -39,8 +40,18 @@ function Edit({
       description: newDescription
     });
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
+  const changeAlignment = newAlignment => {
+    setAttributes({
+      alignment: newAlignment
+    });
+  };
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.AlignmentToolbar, {
+    value: alignment,
+    onChange: changeAlignment
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+      className: `align-${alignment}`
+    })
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h2",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Card Title", "nestedcardblock"),
@@ -51,7 +62,7 @@ function Edit({
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Card Description", "nestedcardblock"),
     value: description,
     onChange: changeDescription
-  }));
+  })));
 }
 
 /***/ }),
@@ -93,6 +104,10 @@ __webpack_require__.r(__webpack_exports__);
       type: "string",
       source: "html",
       selector: "p"
+    },
+    alignment: {
+      type: "string",
+      default: "left"
     }
   },
   edit: _edit_card__WEBPACK_IMPORTED_MODULE_2__["default"],

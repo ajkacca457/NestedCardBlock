@@ -25,6 +25,10 @@ registerBlockType( "create-block/card-item", {
 			type:"string",
 			source:"html",
 			selector:"p"
+		},
+		alignment :{
+			type:"string",
+			default:"left"
 		}
 	},
 
