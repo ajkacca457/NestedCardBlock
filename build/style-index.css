@@ -13,6 +13,19 @@
   padding: 2px;
   max-width: 1200px;
   margin: 20px auto;
+  display: grid;
+}
+
+.column-1 {
+  grid-template-columns: 1fr;
+}
+
+.column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .align-left {
