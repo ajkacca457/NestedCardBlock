@@ -4,8 +4,8 @@
   "name": "create-block/nestedcardblock",
   "version": "0.1.0",
   "title": "Nested Card Block",
-  "category": "widgets",
-  "icon": "smiley",
+  "category": "design",
+  "icon": "insert-after",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
     "html": false
