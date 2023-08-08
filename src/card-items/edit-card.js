@@ -1,5 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
+import classNames from 'classnames';
 
 export default function Edit({attributes,setAttributes}) {
 	const {title,description, alignment}= attributes;
@@ -22,7 +23,7 @@ export default function Edit({attributes,setAttributes}) {
 		})
 	}
 
-
+	const classes= classNames(`align-${alignment}`);
 
 	return (
 		<>
@@ -31,7 +32,7 @@ export default function Edit({attributes,setAttributes}) {
 			</BlockControls>
 
 			<div { ...useBlockProps({
-				className:`align-${alignment}`
+				className:classes
 			}) }>
             	<RichText tagName='h2' placeholder={__("Card Title","nestedcardblock")} value={title} onChange={changeTitle}/>
             	<RichText tagName='p' placeholder={__("Card Description","nestedcardblock")} value={description} onChange={changeDescription} />
