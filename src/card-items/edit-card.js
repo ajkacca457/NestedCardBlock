@@ -1,41 +1,42 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, RichText, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
+import { useBlockProps, RichText, BlockControls, AlignmentToolbar, MediaPlaceholder } from '@wordpress/block-editor';
 import classNames from 'classnames';
 
-export default function Edit({attributes,setAttributes}) {
-	const {title,description, alignment}= attributes;
+export default function Edit({ attributes, setAttributes }) {
+	const { title, description, alignment } = attributes;
 
-	const changeTitle=(newTitle)=>{
+	const changeTitle = (newTitle) => {
 		setAttributes({
-			title:newTitle
-		})
-	}
+			title: newTitle
+		});
+	};
 
-	const changeDescription=(newDescription)=>{
+	const changeDescription = (newDescription) => {
 		setAttributes({
-			description:newDescription
-		})
-	}
+			description: newDescription
+		});
+	};
 
-	const changeAlignment=(newAlignment)=>{
+	const changeAlignment = (newAlignment) => {
 		setAttributes({
-			alignment:newAlignment
-		})
-	}
+			alignment: newAlignment
+		});
+	};
 
-	const classes= classNames(`align-${alignment}`);
+	const classes = classNames(`align-${alignment}`);
 
 	return (
 		<>
-			<BlockControls>	
+			<BlockControls>
 				<AlignmentToolbar value={alignment} onChange={changeAlignment} />
 			</BlockControls>
 
-			<div { ...useBlockProps({
-				className:classes
-			}) }>
-            	<RichText tagName='h2' placeholder={__("Card Title","nestedcardblock")} value={title} onChange={changeTitle}/>
-            	<RichText tagName='p' placeholder={__("Card Description","nestedcardblock")} value={description} onChange={changeDescription} />
+			<div {...useBlockProps({
+				className: classes
+			})}>
+				<MediaPlaceholder />
+				<RichText tagName='h2' placeholder={__("Card Title", "nestedcardblock")} value={title} onChange={changeTitle} />
+				<RichText tagName='p' placeholder={__("Card Description", "nestedcardblock")} value={description} onChange={changeDescription} />
 			</div>
 		</>
 	);

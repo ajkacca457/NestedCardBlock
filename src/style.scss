@@ -11,27 +11,32 @@
 	padding: 2px;
 	max-width: 1200px;
 	margin: 20px auto;
-	
+	padding: 10px;
+
 }
 
 .column-1 {
-	>.layout-grid{
-		display:grid;
+	>.layout-grid {
+		display: grid;
 		grid-template-columns: 1fr;
+		gap: 20px;
 	}
 }
 
 .column-2 {
-	>.layout-grid{
-		display:grid;
-		grid-template-columns: repeat(2,1fr);
+	>.layout-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
 	}
 
 }
+
 .column-3 {
-	>.layout-grid{
-		display:grid;
-		grid-template-columns: repeat(3,1fr);
+	>.layout-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
 	}
 }
 
