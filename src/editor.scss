@@ -32,3 +32,20 @@
 		gap: 20px;
 	}
 }
+
+.is-loading {
+	position: relative;
+
+	img {
+		opacity: 0.5;
+	}
+
+	.components-spinner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
