@@ -2,12 +2,12 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText, BlockControls, AlignmentToolbar, MediaPlaceholder } from '@wordpress/block-editor';
 import { Spinner } from '@wordpress/components';
 import classNames from 'classnames';
-import { useState } from '@wordpress/element';
-import { isBlobURL } from '@wordpress/blob';
-import { useEffect } from '@wordpress/element';
+import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
+import { useEffect, useState } from '@wordpress/element';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { title, description, alignment, id, alt, url } = attributes;
+	const [blobURL, setBlobURL] = useState();
 
 	const changeTitle = (newTitle) => {
 		setAttributes({
@@ -54,6 +54,14 @@ export default function Edit({ attributes, setAttributes }) {
 		}
 	}, []);
 
+	useEffect(() => {
+		if (isBlobURL(url)) {
+			setBlobURL(url);
+		} else {
+			revokeBlobURL(blobURL);
+			setBlobURL();
+		}
+	}, [url]);
 
 	return (
 		<>
