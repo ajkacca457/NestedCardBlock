@@ -13,6 +13,11 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+
+		.block-list-appender {
+			border: 1px dashed gray;
+			padding: 20px;
+		}
 	}
 
 }
@@ -23,6 +28,11 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
 	}
+
+	.block-list-appender {
+		border: 1px dashed gray;
+		padding: 20px;
+	}
 }
 
 .block-editor-block-list__block.column-1 {
@@ -30,6 +40,11 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 20px;
+	}
+
+	.block-list-appender {
+		border: 1px dashed gray;
+		padding: 20px;
 	}
 }
 

@@ -15,17 +15,29 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+.block-editor-block-list__block.column-3 > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+  border: 1px dashed gray;
+  padding: 20px;
+}
 
 .block-editor-block-list__block.column-2 > .block-editor-inner-blocks > .block-editor-block-list__layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+.block-editor-block-list__block.column-2 .block-list-appender {
+  border: 1px dashed gray;
+  padding: 20px;
+}
 
 .block-editor-block-list__block.column-1 > .block-editor-inner-blocks > .block-editor-block-list__layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+}
+.block-editor-block-list__block.column-1 .block-list-appender {
+  border: 1px dashed gray;
+  padding: 20px;
 }
 
 .is-loading {

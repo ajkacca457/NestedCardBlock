@@ -24,7 +24,8 @@
       "default": {
         "color": {
           "background": "#0280c9",
-          "text": "#ffffff"
+          "text": "#ffffff",
+          "selector": "style"
         }
       }
     }
