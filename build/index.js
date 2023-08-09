@@ -540,7 +540,7 @@ module.exports = window["wp"]["i18n"];
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/nestedcardblock","version":"0.1.0","title":"Nested Card Block","category":"design","icon":"insert-after","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"columns":{"type":"number","default":1}},"textdomain":"nestedcardblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/nestedcardblock","version":"0.1.0","title":"Nested Card Block","category":"design","icon":"insert-after","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"color":{"background":true,"text":true}},"attributes":{"columns":{"type":"number","default":1},"style":{"type":"object","default":{"color":{"background":"#0280c9","text":"#ffffff"}}}},"textdomain":"nestedcardblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

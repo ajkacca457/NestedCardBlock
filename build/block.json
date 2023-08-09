@@ -8,12 +8,25 @@
   "icon": "insert-after",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true
+    }
   },
   "attributes": {
     "columns": {
       "type": "number",
       "default": 1
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "color": {
+          "background": "#0280c9",
+          "text": "#ffffff"
+        }
+      }
     }
   },
   "textdomain": "nestedcardblock",
