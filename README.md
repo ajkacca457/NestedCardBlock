@@ -1,5 +1,5 @@
 # NestedCardBlock
-A gutenberg block for wordpress gutenberg block editor. This plugin allow user to register a block with image and texts. User will be able to manipulate position of the image, alignment of the texts, colors of the block (background, text), spacing of the block (padding). 
+A gutenberg complex nested block for wordpress gutenberg block editor. This plugin allow user to register create a block with nested block. Parent block will allow user to manipulate number of grid columns. Parent block will only host registed "card-item" block which contains image and texts. User will be able to add as many "card-item" as they want. Parent block will render all the card items based on the specified columns. Children block has option to manipulate alignment of the text in the toolbar. 
 
 ## Project Display
 
@@ -38,8 +38,10 @@ $ Run `npm run start` to start client server.
 
 To run test in your terminal:
 
-- adding grid manipulation
-- Adding transition animation dynamically
+- adding display order option for images and texts.
+- adding transition animation dynamically.
+- adding border manipuration for the card item.
+- adding custom background and font selection.
 
 
 # Authors
