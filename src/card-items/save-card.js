@@ -14,8 +14,8 @@ export default function save({ attributes }) {
             <div className='image-container'>
                 {url ? <img src={url} alt={alt} /> : <div className='placeholder'>Place Holder</div>}
             </div>
-            <RichText.Content tagName='h2' value={title} />
-            <RichText.Content tagName='p' value={description} />
+            {title && <RichText.Content tagName='h2' value={title} />}
+            {description && <RichText.Content tagName='p' value={description} />}
         </div>
     );
 }
