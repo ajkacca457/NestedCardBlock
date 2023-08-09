@@ -30,6 +30,33 @@
 			}
 		}
 	},
+	"example": {
+		"attributes": {
+			"columns": 2,
+			"style": {
+				"color": {
+					"background": "#0280c9",
+					"text": "#ffffff"
+				}
+			},
+			"innerBlocks": [
+				{
+					"name": "create-block/card-item",
+					"attributes": {
+						"title": "Demo block 1",
+						"description": "This is a demo block"
+					}
+				},
+				{
+					"name": "create-block/card-item",
+					"attributes": {
+						"title": "Demo block 2",
+						"description": "This is a demo block 2"
+					}
+				}
+			]
+		}
+	},
 	"textdomain": "nestedcardblock",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

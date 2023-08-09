@@ -81,6 +81,11 @@ function Edit({
       url: undefined
     });
   };
+  const changeImagePosition = newPosition => {
+    setAttributes({
+      imagePosition: newPosition
+    });
+  };
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (!id && (0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_5__.isBlobURL)(url)) {
       setAttributes({
@@ -559,7 +564,7 @@ module.exports = window["wp"]["i18n"];
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/nestedcardblock","version":"0.1.0","title":"Nested Card Block","category":"design","icon":"insert-after","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"color":{"background":true,"text":true}},"attributes":{"columns":{"type":"number","default":1},"style":{"type":"object","default":{"color":{"background":"#0280c9","text":"#ffffff","selector":"style"}}}},"textdomain":"nestedcardblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/nestedcardblock","version":"0.1.0","title":"Nested Card Block","category":"design","icon":"insert-after","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"color":{"background":true,"text":true}},"attributes":{"columns":{"type":"number","default":1},"style":{"type":"object","default":{"color":{"background":"#0280c9","text":"#ffffff","selector":"style"}}}},"example":{"attributes":{"columns":2,"style":{"color":{"background":"#0280c9","text":"#ffffff"}},"innerBlocks":[{"name":"create-block/card-item","attributes":{"title":"Demo block 1","description":"This is a demo block"}},{"name":"create-block/card-item","attributes":{"title":"Demo block 2","description":"This is a demo block 2"}}]}},"textdomain":"nestedcardblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

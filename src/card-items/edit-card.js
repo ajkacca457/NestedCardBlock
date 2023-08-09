@@ -52,6 +52,12 @@ export default function Edit({ attributes, setAttributes }) {
 		});
 	};
 
+	const changeImagePosition = (newPosition) => {
+		setAttributes({
+			imagePosition: newPosition
+		});
+	};
+
 	useEffect(() => {
 		if (!id && isBlobURL(url)) {
 			setAttributes({
