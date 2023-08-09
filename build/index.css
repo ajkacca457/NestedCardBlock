@@ -43,4 +43,14 @@
   margin: auto;
 }
 
+.block-editor-block-list__block h2 {
+  font-size: 1.5rem !important;
+  text-transform: uppercase;
+  font-weight: bold !important;
+}
+.block-editor-block-list__block p {
+  font-size: 1rem !important;
+  line-height: 1.5;
+}
+
 /*# sourceMappingURL=index.css.map*/
