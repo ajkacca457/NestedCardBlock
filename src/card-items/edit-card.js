@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, RichText, BlockControls, AlignmentToolbar, MediaPlaceholder } from '@wordpress/block-editor';
-import { Spinner } from '@wordpress/components';
+import { useBlockProps, RichText, BlockControls, AlignmentToolbar, MediaPlaceholder, MediaReplaceFlow } from '@wordpress/block-editor';
+import { Spinner, ToolbarButton } from '@wordpress/components';
 import classNames from 'classnames';
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
 import { useEffect, useState } from '@wordpress/element';
@@ -44,6 +44,13 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const classes = classNames(`align-${alignment}`);
 
+	const removeImage = () => {
+		setAttributes({
+			id: undefined,
+			alt: "",
+			url: undefined
+		});
+	};
 
 	useEffect(() => {
 		if (!id && isBlobURL(url)) {
@@ -68,6 +75,21 @@ export default function Edit({ attributes, setAttributes }) {
 			<BlockControls>
 				<AlignmentToolbar value={alignment} onChange={changeAlignment} />
 			</BlockControls>
+			{url && <BlockControls group="block">
+				<MediaReplaceFlow
+					name={__("Replace Image", "nestedcardblock")}
+					onError={(value) => console.log(value)}
+					onSelect={changeImage}
+					accept='image/*'
+					allowedTypes={["image"]}
+					mediaId={id}
+					mediaURL={url}
+				/>
+
+				<ToolbarButton onClick={removeImage}>
+					{__("Remove Image", "nestedcardblock")}
+				</ToolbarButton>
+			</BlockControls>}
 
 			<div {...useBlockProps({
 				className: classes
