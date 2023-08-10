@@ -36,8 +36,6 @@ $ Run `npm run start` to start client server.
 
 # Future development pipeline
 
-To run test in your terminal:
-
 - adding display order option for images and texts.
 - adding transition animation dynamically.
 - adding border manipuration for the card item.
